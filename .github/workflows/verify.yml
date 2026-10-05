@@ -1,0 +1,86 @@
+name: Verify NeedleBatch
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  exact-model-and-native-consumer:
+    runs-on: ubuntu-22.04
+    timeout-minutes: 12
+    strategy:
+      fail-fast: false
+      matrix:
+        node: [22, 24]
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node }}
+          cache: npm
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: npm ci --ignore-scripts
+      - run: python3 -m pip install --require-hashes -r requirements-test.txt
+      - run: npm run check
+      - run: python3 oracle/crosscheck.py --count 10000 --systematic --report artifacts/oracle-ci.json
+      - run: python3 scripts/consumer-spike.py
+      - run: python3 tests/consumer-edge-cases.py
+      - run: python3 scripts/verify-bundle.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: needle-native-node-${{ matrix.node }}
+          path: artifacts/
+          if-no-files-found: error
+  sandboxed-browser-and-download:
+    runs-on: ubuntu-22.04
+    timeout-minutes: 15
+    env:
+      BASE_PATH: /needle-batch/
+      BASE_URL: http://127.0.0.1:4173/needle-batch/web/
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: npm ci --ignore-scripts
+      - run: python3 -m pip install --require-hashes -r requirements-test.txt
+      - run: npx --no-install playwright install --with-deps chromium
+      - run: sudo apt-get update && sudo apt-get install --no-install-recommends -y fonts-noto-cjk poppler-utils
+      - run: npm run build
+      - name: Real UI, download and mobile checks with Chromium sandbox enabled
+        run: |
+          mkdir -p artifacts/browser
+          npm run serve > artifacts/browser/server.log 2>&1 &
+          server_pid=$!
+          trap 'kill "$server_pid" 2>/dev/null || true' EXIT
+          ready=0
+          for i in $(seq 1 30); do
+            if curl --fail --silent "$BASE_URL" > /dev/null; then ready=1; break; fi
+            sleep 1
+          done
+          test "$ready" = 1
+          npm run test:browser
+      - name: Pinned independent consumer reads actual browser download
+        run: python3 scripts/verify-bundle.py artifacts/browser/downloaded.zip
+      - name: Check and render the downloaded loading checklist PDF
+        run: |
+          python3 scripts/verify-print.py artifacts/browser/loading-checklist.pdf artifacts/browser/downloaded-manifest.json
+          pdftoppm -r 110 -png artifacts/browser/loading-checklist.pdf artifacts/browser/loading-checklist-page
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: needle-browser-evidence
+          path: artifacts/
+          if-no-files-found: error
