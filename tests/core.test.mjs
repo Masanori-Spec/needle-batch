@@ -48,3 +48,18 @@ test('packaging has no original-code license grant and keeps dependency attribut
 });
 
 test('printed checklist prefers installed Japanese fonts without bundling them',async()=>{const d=demo(),bundle=await exportBundle(d,optimize(prepareModel(d)));assert.ok(bundle.html.includes('"Noto Sans CJK JP","Noto Sans JP",system-ui,sans-serif'));assert.ok(!bundle.html.includes('@font-face'));});
+
+test('PDF embedding gate accepts unnamed Type 3 metadata but rejects unembedded or absent fonts',async()=>{
+ const {execFileSync}=await import('node:child_process');
+ const program=String.raw`import runpy
+check=runpy.run_path('scripts/verify-print.py')['parse_embedded_fonts']
+head='name type encoding emb sub uni object ID\n----------------------------------------\n'
+assert len(check(head+'[none] Type 3 Custom yes no yes 4 0\n'))==1
+assert len(check(head+'AAAAAA+NotoSansCJKjp-Regular Type 3 Custom yes yes yes 4 0\n'))==1
+for bad in [head,head+'AAAAAA+Latin CID TrueType Identity-H no yes yes 4 0\n']:
+ try: check(bad)
+ except AssertionError: pass
+ else: raise AssertionError('invalid font embedding was accepted')
+`;
+ execFileSync('python3',['-c',program],{cwd:root});
+});
