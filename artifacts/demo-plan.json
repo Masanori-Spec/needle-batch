@@ -1,0 +1,128 @@
+{
+  "status": "optimal",
+  "minimumChanges": 2,
+  "greedyChanges": 3,
+  "steps": [
+    {
+      "name": "01-c.u01",
+      "loads": [
+        {
+          "number": 1,
+          "thread": "A",
+          "locked": false,
+          "unavailable": false
+        },
+        {
+          "number": 2,
+          "thread": "C",
+          "locked": false,
+          "unavailable": false
+        },
+        {
+          "number": 3,
+          "thread": "L",
+          "locked": true,
+          "unavailable": false
+        }
+      ],
+      "changes": [
+        {
+          "number": 2,
+          "from": "B",
+          "to": "C"
+        }
+      ],
+      "threadToNeedle": {
+        "A": 1,
+        "C": 2,
+        "L": 3
+      },
+      "needleSequence": [
+        2
+      ]
+    },
+    {
+      "name": "02-a.u01",
+      "loads": [
+        {
+          "number": 1,
+          "thread": "A",
+          "locked": false,
+          "unavailable": false
+        },
+        {
+          "number": 2,
+          "thread": "C",
+          "locked": false,
+          "unavailable": false
+        },
+        {
+          "number": 3,
+          "thread": "L",
+          "locked": true,
+          "unavailable": false
+        }
+      ],
+      "changes": [],
+      "threadToNeedle": {
+        "A": 1,
+        "C": 2,
+        "L": 3
+      },
+      "needleSequence": [
+        1
+      ]
+    },
+    {
+      "name": "03-bcbc.u01",
+      "loads": [
+        {
+          "number": 1,
+          "thread": "B",
+          "locked": false,
+          "unavailable": false
+        },
+        {
+          "number": 2,
+          "thread": "C",
+          "locked": false,
+          "unavailable": false
+        },
+        {
+          "number": 3,
+          "thread": "L",
+          "locked": true,
+          "unavailable": false
+        }
+      ],
+      "changes": [
+        {
+          "number": 1,
+          "from": "A",
+          "to": "B"
+        }
+      ],
+      "threadToNeedle": {
+        "B": 1,
+        "C": 2,
+        "L": 3
+      },
+      "needleSequence": [
+        1,
+        2,
+        1,
+        2
+      ]
+    }
+  ],
+  "stats": {
+    "states": 6,
+    "transitions": 7
+  },
+  "model": {
+    "jobOrder": "fixed",
+    "replacementCost": 1,
+    "midJobChanges": false,
+    "initialPreparationCounted": true
+  }
+}

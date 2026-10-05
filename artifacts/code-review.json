@@ -1,0 +1,22 @@
+{
+  "date": "2026-10-05",
+  "status": "PASS",
+  "scope": "Independent core/export code review; no browser or physical machine claim",
+  "reviewedCoreSha256": "2d53bfad290d51c91daae7ce8d75afe4d43349c5635ae7ae1f11890b582a03e9",
+  "reviewedExportSha256": "1228a8c2c7da543b72f1cbabfbcb7ebfc880dd6b7f78c4c032bd342093651400",
+  "resolvedFindings": [
+    "Source byte references could mutate during asynchronous hashing; every source is now snapshotted before the first await",
+    "Full command witnesses were expanded for every DP candidate; only the winning lightweight path is materialized",
+    "Locale comparison conflated distinct Unicode strings; occupancy canonicalization now uses exact lexical order",
+    "Record and manifest expansion needed resource caps; job/byte/record/needle-command counts are now preflighted or bounded"
+  ],
+  "boundaryExercise": {
+    "nativeRecords": 500000,
+    "needleCommands": 30000,
+    "nodeHeapLimitMiB": 256,
+    "outcome": "Successfully optimized and exported",
+    "approximateZipMB": 12.2
+  },
+  "conclusion": "No remaining core/export blocker found. Needle-only byte eligibility, bounded exact model, stale binding, HTML escaping and generated ZIP paths reviewed.",
+  "additionalReview": "Recovery review kept core unchanged, confirmed pre-await export snapshots and bounded inputs, and added wrapping/bounded display for the printable checklist. Native files and full JSON command witnesses remain complete."
+}

@@ -1,0 +1,103 @@
+{
+  "scope": "400 seeded 8-job 6-needle 10-ID synthetic models, timing diagnostic only, not a worst-case bound",
+  "seed": 177,
+  "worstObserved": {
+    "case": 0,
+    "ms": 14.169656999999994,
+    "states": 162,
+    "transitions": 722,
+    "status": "optimal",
+    "minimumChanges": 9,
+    "input": {
+      "needles": [
+        {
+          "number": 1,
+          "thread": "A"
+        },
+        {
+          "number": 2,
+          "thread": "B"
+        },
+        {
+          "number": 3,
+          "thread": "C"
+        },
+        {
+          "number": 4,
+          "thread": "D"
+        },
+        {
+          "number": 5,
+          "thread": "E"
+        },
+        {
+          "number": 6,
+          "thread": "F"
+        }
+      ],
+      "jobs": [
+        {
+          "threads": [
+            "B",
+            "E",
+            "J",
+            "G",
+            "H"
+          ]
+        },
+        {
+          "threads": [
+            "J",
+            "A",
+            "B",
+            "I"
+          ]
+        },
+        {
+          "threads": [
+            "D",
+            "C",
+            "B"
+          ]
+        },
+        {
+          "threads": [
+            "D",
+            "C",
+            "H"
+          ]
+        },
+        {
+          "threads": [
+            "D",
+            "G",
+            "J",
+            "I"
+          ]
+        },
+        {
+          "threads": [
+            "B"
+          ]
+        },
+        {
+          "threads": [
+            "F",
+            "I",
+            "H",
+            "J"
+          ]
+        },
+        {
+          "threads": [
+            "H",
+            "G",
+            "D",
+            "C",
+            "F"
+          ]
+        }
+      ]
+    }
+  }
+}

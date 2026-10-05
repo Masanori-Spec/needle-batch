@@ -1,0 +1,4 @@
+import fs from 'node:fs/promises';import {prepareModel,optimize} from '../src/core.mjs';import {exportBundle} from '../src/export.mjs';
+const root=new URL('../',import.meta.url),input=JSON.parse(await fs.readFile(new URL('fixtures/demo.json',root),'utf8'));
+for(const j of input.jobs)j.bytes=new Uint8Array(await fs.readFile(new URL('fixtures/'+j.name,root)));
+const result=optimize(prepareModel(input)),bundle=await exportBundle(input,result);await fs.mkdir(new URL('artifacts/demo-export/',root),{recursive:true});for(const f of bundle.files)await fs.writeFile(new URL('artifacts/demo-export/'+f.name,root),f.bytes);await fs.writeFile(new URL('artifacts/demo-batch.zip',root),bundle.bytes);await fs.writeFile(new URL('artifacts/demo-plan.json',root),JSON.stringify(result,null,2)+'\n');console.log('Demo native ZIP exported: optimum '+result.minimumChanges+', greedy '+result.greedyChanges);

@@ -1,0 +1,15 @@
+{
+  "passed": true,
+  "cases": 12941,
+  "seed": 20261005,
+  "generatedCases": 10000,
+  "handCheckedCases": 25,
+  "systematicCases": 2916,
+  "caseStatuses": {
+    "optimal": 6636,
+    "infeasible": 5973,
+    "invalid": 332
+  },
+  "optimizerSha256": "2d53bfad290d51c91daae7ce8d75afe4d43349c5635ae7ae1f11890b582a03e9",
+  "failures": []
+}

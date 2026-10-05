@@ -1,0 +1,23 @@
+{
+  "name": "needle-batch",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Fixed-order U01 batch needle loading with conservative native patching",
+  "scripts": {
+    "test": "node --test tests/*.test.mjs",
+    "fixtures": "python3 scripts/author-fixtures.py",
+    "build": "node scripts/build.mjs",
+    "verify": "npm run check",
+    "test:browser": "node tests/browser.mjs",
+    "test:oracle": "python3 -m unittest discover -s oracle -p \"test_*.py\" -q",
+    "check": "npm test && npm run test:oracle && npm run build && node scripts/export-demo.mjs && node --max-old-space-size=256 scripts/verify-boundary.mjs",
+    "serve": "node scripts/serve.mjs"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.56.0"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}

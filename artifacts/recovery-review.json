@@ -1,0 +1,79 @@
+{
+  "date": "2026-10-05",
+  "status": "PASS_NON_BROWSER",
+  "review": "Independent recovery review and source freeze",
+  "coreSha256": "2d53bfad290d51c91daae7ce8d75afe4d43349c5635ae7ae1f11890b582a03e9",
+  "exportSha256": "1228a8c2c7da543b72f1cbabfbcb7ebfc880dd6b7f78c4c032bd342093651400",
+  "browserTestSha256": "1b4d938b31b7627f2f276f23c3284a9a6cf58308bb1bbb5ec1145b3210d42055",
+  "passed": {
+    "nodeTests": 247,
+    "pythonOracleUnitTests": 8,
+    "independentExactComparisons": 12941,
+    "oracleMismatches": 0,
+    "pinnedConsumerEdgeCases": 1800,
+    "actualNativeZipConsumer": true,
+    "demoMinimumChanges": 2,
+    "demoGreedyChanges": 3,
+    "demoNeedleSequences": [
+      [
+        2
+      ],
+      [
+        1
+      ],
+      [
+        1,
+        2,
+        1,
+        2
+      ]
+    ],
+    "allNonNeedleBytesPreserved": true,
+    "movingNeedleAndStopConsumerChecks": true,
+    "syntaxChecks": [
+      "tests/browser.mjs",
+      "scripts/verify-print.py",
+      "scripts/freeze-release.py"
+    ],
+    "staticHttpSmoke": {
+      "basePath": "/needle-batch/",
+      "html": 200,
+      "coreModuleBytesIdentical": true,
+      "encodedTraversal": 404
+    },
+    "cleanExtractedSourceArchive": {
+      "nodeTests": 247,
+      "pythonOracleUnitTests": 8,
+      "buildAndNativeConsumer": true
+    },
+    "maximumExpansion": {
+      "records": 500000,
+      "needleCommands": 30000,
+      "requestedOldSpaceMiB": 256,
+      "passed": true,
+      "zipBytes": 12050013
+    }
+  },
+  "changes": [
+    "Removed the original-code/fixture MIT grant from LICENSE, root package metadata and documentation; dependency attribution preserved",
+    "Replaced broad raw log packaging with an explicit summary allowlist and exact ZIP member/hash checks",
+    "Added a hosted sandboxed browser print/PDF gate using the actual downloaded checklist, PDF text/page-bound assertions, and rendered page evidence",
+    "Wrapped long checklist fields and bounded displayed needle sequences to 120 while preserving every native command and JSON witness",
+    "Fixed static server trailing-slash containment bug that rejected every normal route; added three path/mount/traversal regression cases and real HTTP smoke verification",
+    "Added a reproducible maximum-expansion gate to npm run check under a 256 MiB old-space heap"
+  ],
+  "reviewed": [
+    "Global optimum and physical witness against independent exhaustive oracle",
+    "Conservative parsing and strict mapping/resource bounds",
+    "Only original needle control low bits eligible to change",
+    "STOP and moving needle preservation through pystitch 1.0.1",
+    "Asynchronous import/demo/export epoch invalidation and immutable export snapshots",
+    "Escaped user text and safe deterministic ZIP paths"
+  ],
+  "notRun": [
+    "Live browser or print rendering in this review; container launch previously blocked by socket permission",
+    "Hosted Ubuntu 22.04 Actions against the eventual exact published commit"
+  ],
+  "remainingGate": "Run exact-commit hosted CI; inspect desktop/mobile Japanese/English screenshots and every printed PDF page. No browser pass is claimed until then.",
+  "scopeLimit": "Software evidence only. No hardware, physical sewout, all-firmware compatibility or operator-safety guarantee."
+}

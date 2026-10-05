@@ -1,0 +1,1 @@
+export async function generateDemo(){const base=new URL('../fixtures/',import.meta.url);const model=await(await fetch(new URL('demo.json',base))).json();model.jobs=await Promise.all(model.jobs.map(async j=>({...j,bytes:new Uint8Array(await(await fetch(new URL(j.name,base))).arrayBuffer())})));return model;}

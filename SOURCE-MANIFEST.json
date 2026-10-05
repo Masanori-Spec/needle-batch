@@ -1,0 +1,265 @@
+{
+  "name": "NeedleBatch",
+  "version": "1.0.0",
+  "files": [
+    {
+      "path": ".github/workflows/verify.yml",
+      "bytes": 3089,
+      "sha256": "6481ab6ba4ea45577fb32ad27d21f6887a1632b72248c8068f4d1d113e97ce01"
+    },
+    {
+      "path": ".gitignore",
+      "bytes": 65,
+      "sha256": "3e79625f770c551f00f9f38b389c1eb75f5e040860cb99b4393f3606a5d8d488"
+    },
+    {
+      "path": "README.md",
+      "bytes": 6179,
+      "sha256": "f89dca53aab879fd3f00d8f8938135ecdbbe419d31b0b0b77fc3b06581a754a4"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES.md",
+      "bytes": 1198,
+      "sha256": "b4b452c7c67c05ee38310664f8df504e918d51dca7b216ccc16e174bcb16e625"
+    },
+    {
+      "path": "artifacts/boundary-export.json",
+      "bytes": 289,
+      "sha256": "5b27d08fc69bf3868836ace4e565301c9d27893300b9e40bea204f4743ea1762"
+    },
+    {
+      "path": "artifacts/bounds-benchmark.json",
+      "bytes": 1705,
+      "sha256": "adcdda2f360b2e6e05d8b2596ea1932a3cb7b9dabf8c83d9e19090842fe5af6c"
+    },
+    {
+      "path": "artifacts/code-review.json",
+      "bytes": 1456,
+      "sha256": "5c5592317d7f4e899ef7919cfff0a96a073b9292e172b7dc224f6c9288b778a8"
+    },
+    {
+      "path": "artifacts/consumer-edges.json",
+      "bytes": 206,
+      "sha256": "1cf6ddd93bde3dc4480708f72e30d9dff0e94af20e98da60ee4c82c9e07b0637"
+    },
+    {
+      "path": "artifacts/consumer-export.json",
+      "bytes": 1562,
+      "sha256": "28ad58a7724f1c783757fce5b1afdfd0df21ad9b4f187e12397d8f4199e2ec98"
+    },
+    {
+      "path": "artifacts/consumer-spike.json",
+      "bytes": 1483,
+      "sha256": "259cfb64d2139e5f7afbed1c7d78c96dafacbcbf4cbf995c6a716ae092112d4c"
+    },
+    {
+      "path": "artifacts/demo-plan.json",
+      "bytes": 2274,
+      "sha256": "4a4577e861fee64a23b35a5ab48f4c3ab30e835c352da2867f0258ed56726b96"
+    },
+    {
+      "path": "artifacts/recovery-review.json",
+      "bytes": 3261,
+      "sha256": "1a95a6fe73c446b7f0f331088a7750ddc43982d0d39788c34526d3bad66bd0ed"
+    },
+    {
+      "path": "docs/ALGORITHM.md",
+      "bytes": 3820,
+      "sha256": "db968c266448de0b1ab17908a352a8165cba67ad9550e1cfb0a9d99f24a55140"
+    },
+    {
+      "path": "docs/RESEARCH.md",
+      "bytes": 3466,
+      "sha256": "9717f93036bf6e9a4cfe14331524fadd13c70e92583bcc220969b0948e443dcf"
+    },
+    {
+      "path": "docs/VERIFICATION.md",
+      "bytes": 4446,
+      "sha256": "2aa4b9fe1bd83d70aa1f462df81c8cb46a3780a953bb56c817bb8a1009b35355"
+    },
+    {
+      "path": "fixtures/01-c.u01",
+      "bytes": 286,
+      "sha256": "2cdac978e6f614d28686132b7d4520c8ce8c88c6ecdfcfd5082c8a6913ce847d"
+    },
+    {
+      "path": "fixtures/02-a.u01",
+      "bytes": 280,
+      "sha256": "99504ee7177f77786d6039a79394d06369d1f14b5a239883aa5980c4d64b1d52"
+    },
+    {
+      "path": "fixtures/03-bcbc.u01",
+      "bytes": 298,
+      "sha256": "0daf5d11cc1fd45481abbaba87ae0a710fe47608654997e64e61c855e9e56f0e"
+    },
+    {
+      "path": "fixtures/PROVENANCE.md",
+      "bytes": 1342,
+      "sha256": "e5d85150d2fee3e69f64eeb44e231f87769352065f8355c5f719b9310aef5b06"
+    },
+    {
+      "path": "fixtures/demo.json",
+      "bytes": 616,
+      "sha256": "32456cfc861ea7ad922c15bbe525e8ee892ee5174e2f75465c319b515d987a3e"
+    },
+    {
+      "path": "oracle/README.md",
+      "bytes": 5819,
+      "sha256": "b220442850e318b6efaecebcf6d2a8d2e7e901872dd1635ace4d18c015c4df8f"
+    },
+    {
+      "path": "oracle/crosscheck.py",
+      "bytes": 4651,
+      "sha256": "eb27d6415fd953691ea6a5da06226837beec9802c92ee7b6aa8a47bebb8739db"
+    },
+    {
+      "path": "oracle/exhaustive.py",
+      "bytes": 13738,
+      "sha256": "fc359aeb59888a46606df5aba04e6c85fe46551b973c827254ef3b7e5234980a"
+    },
+    {
+      "path": "oracle/generate_cases.py",
+      "bytes": 7593,
+      "sha256": "2ca85adf3ad7bb35fb1313df7033910764635989c416352d8a6416f30df48178"
+    },
+    {
+      "path": "oracle/test_exhaustive.py",
+      "bytes": 4363,
+      "sha256": "4102bf2fcedc2d9e526848405d62f339ebe65cca3674176417b33b2b934affdb"
+    },
+    {
+      "path": "oracle/vectors.json",
+      "bytes": 269820,
+      "sha256": "640c7a43a03e5c7d0b0ba8313b79d3e73e6be764009772c55a1c0b59792eb9c5"
+    },
+    {
+      "path": "oracle/verification.json",
+      "bytes": 335,
+      "sha256": "5459fba8356b8eef774ab1e51f0224eb655d0b21d900e8d4d6d0df253ce8e6e6"
+    },
+    {
+      "path": "package-lock.json",
+      "bytes": 2283,
+      "sha256": "1e8b5c8464778ae1640785c0c159fe2426708d9ce20e64295c90cb97a98fd8de"
+    },
+    {
+      "path": "package.json",
+      "bytes": 792,
+      "sha256": "92bd282e09e61ecdc06b5290e46860413a878fda4207f5086272168bfc7a710a"
+    },
+    {
+      "path": "requirements-test.txt",
+      "bytes": 95,
+      "sha256": "ca4fa1ac7bb100a5490b5056e7ca1f53f804eb5d1dd044355429aafe201d02e9"
+    },
+    {
+      "path": "scripts/author-fixtures.py",
+      "bytes": 1676,
+      "sha256": "4a3f3b62e1ded1b40eac9b05493625791ead88edb7fad90933c4109a755c0a35"
+    },
+    {
+      "path": "scripts/build.mjs",
+      "bytes": 767,
+      "sha256": "6d0ad8b4b735ba1a7b6a82436f2da0e7d3b3030aeb14e4bed37361b5e77e705c"
+    },
+    {
+      "path": "scripts/consumer-spike.py",
+      "bytes": 1865,
+      "sha256": "03c6d6cce26c5504ee8fdc1ecd180acffa0fb7d3e536747c659ff0fefe0d04d1"
+    },
+    {
+      "path": "scripts/export-demo.mjs",
+      "bytes": 894,
+      "sha256": "c214bd2ccd76fe42d403da55de222cd6739698356569a2e7c302808cefc4beb1"
+    },
+    {
+      "path": "scripts/freeze-release.py",
+      "bytes": 3751,
+      "sha256": "b67b5a3ff9e5bce64d421d8864e392c37779d0cc576a1e67e2641e746274b9df"
+    },
+    {
+      "path": "scripts/serve.mjs",
+      "bytes": 1044,
+      "sha256": "4f2b713550cee68692e9fc35e3dbe856fae874d37f09c2ace04e4fcd03f45f35"
+    },
+    {
+      "path": "scripts/server-path.mjs",
+      "bytes": 762,
+      "sha256": "7743542dc7a90264499e5d22f237368f78b9a681146c7e1f3e2ab5565f2d4595"
+    },
+    {
+      "path": "scripts/verify-boundary.mjs",
+      "bytes": 1712,
+      "sha256": "bdc86d1c5c90ef632ea87d791b78b0ba18328432b4fe2597cc49a18f05f2de76"
+    },
+    {
+      "path": "scripts/verify-bundle.py",
+      "bytes": 3813,
+      "sha256": "e309b0d89079b656cc66b3ce776a952e9c9d60efb8b3ce7694b60cbbb490152f"
+    },
+    {
+      "path": "scripts/verify-print.py",
+      "bytes": 2727,
+      "sha256": "7fe052022d509969ecbc5c6f748ca5a1c36b029775693c9a4d1c049fd2896675"
+    },
+    {
+      "path": "src/core.mjs",
+      "bytes": 11270,
+      "sha256": "2d53bfad290d51c91daae7ce8d75afe4d43349c5635ae7ae1f11890b582a03e9"
+    },
+    {
+      "path": "src/demo.mjs",
+      "bytes": 309,
+      "sha256": "31db401313f3578fc0e547017e58a86fa161da92f60f8ba9ef955441e4cb99db"
+    },
+    {
+      "path": "src/export.mjs",
+      "bytes": 7342,
+      "sha256": "1228a8c2c7da543b72f1cbabfbcb7ebfc880dd6b7f78c4c032bd342093651400"
+    },
+    {
+      "path": "tests/browser.mjs",
+      "bytes": 13935,
+      "sha256": "1b4d938b31b7627f2f276f23c3284a9a6cf58308bb1bbb5ec1145b3210d42055"
+    },
+    {
+      "path": "tests/consumer-edge-cases.py",
+      "bytes": 1351,
+      "sha256": "e17781748a551932d6040b482a432d6d881384525e9cdf4e02bab81386636ec1"
+    },
+    {
+      "path": "tests/core.test.mjs",
+      "bytes": 9491,
+      "sha256": "29d79574f4e86ef43195454620c71f6ccd9729dbc37715d3d5d07c9f99dfabc7"
+    },
+    {
+      "path": "tests/server-path.test.mjs",
+      "bytes": 1580,
+      "sha256": "f63102bec78485d1e9d8e98e9fff66f6f8d934bc9659b99b4254a3ae7be3a623"
+    },
+    {
+      "path": "web/app.mjs",
+      "bytes": 41532,
+      "sha256": "ff3515003e7e93fd86ca4a4e18c5663f5decad4960e6655ad14d075aadfa3509"
+    },
+    {
+      "path": "web/index.html",
+      "bytes": 811,
+      "sha256": "6b30646f4fc39213273308521d9adad7e3e23b029a39649b93d4636ad2a28713"
+    },
+    {
+      "path": "web/styles.css",
+      "bytes": 19420,
+      "sha256": "faa70cb0ca78bdde642a5538121364549d7ae2b324da614b8791948f8a742407"
+    }
+  ],
+  "excluded": [
+    "node_modules",
+    "downloaded test consumer wheels",
+    "downloaded browsers",
+    "Python caches",
+    "raw logs and traces",
+    "original-code license grant",
+    "third-party artwork/palettes/fonts"
+  ]
+}

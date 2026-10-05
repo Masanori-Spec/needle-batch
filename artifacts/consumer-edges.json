@@ -1,0 +1,6 @@
+{
+  "consumer": "pystitch==1.0.1",
+  "cases": 1800,
+  "result": "PASS",
+  "scope": "All 15\u00d715 source/target needle numbers and 8 high-control-bit patterns, moving needle and STOP geometry unchanged"
+}

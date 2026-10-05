@@ -1,0 +1,58 @@
+{
+  "consumer": "pystitch==1.0.1",
+  "wheelSha256": "06ca3502111e2e782b9d4c4f18a2aa1c5e60588436d7697f2481bfe171f12c1b",
+  "result": "PASS",
+  "files": [
+    {
+      "file": "01-c.u01",
+      "sourceSha256": "2cdac978e6f614d28686132b7d4520c8ce8c88c6ecdfcfd5082c8a6913ce847d",
+      "outputSha256": "a301d170402bdd895d74246420c4432744fef1f0be23a515e97c77d89ef41f5f",
+      "decodedCommands": 14,
+      "needleSequence": [
+        2
+      ],
+      "stopCoordinates": [
+        [
+          3,
+          10
+        ]
+      ],
+      "allCoordinatesAndNonNeedleSemanticsEqual": true
+    },
+    {
+      "file": "02-a.u01",
+      "sourceSha256": "99504ee7177f77786d6039a79394d06369d1f14b5a239883aa5980c4d64b1d52",
+      "outputSha256": "aa9ba4f7e36b11e8e41a0345a5213fd877d334443e00fc40da53db016a5653cf",
+      "decodedCommands": 10,
+      "needleSequence": [
+        1
+      ],
+      "stopCoordinates": [
+        [
+          22,
+          3
+        ]
+      ],
+      "allCoordinatesAndNonNeedleSemanticsEqual": true
+    },
+    {
+      "file": "03-bcbc.u01",
+      "sourceSha256": "0daf5d11cc1fd45481abbaba87ae0a710fe47608654997e64e61c855e9e56f0e",
+      "outputSha256": "e8cdefed94ed9613d1ab882286e62cac910aed5f21e17a56b9bafdd475a4a363",
+      "decodedCommands": 21,
+      "needleSequence": [
+        1,
+        2,
+        1,
+        2
+      ],
+      "stopCoordinates": [
+        [
+          1,
+          1
+        ]
+      ],
+      "allCoordinatesAndNonNeedleSemanticsEqual": true
+    }
+  ]
+}

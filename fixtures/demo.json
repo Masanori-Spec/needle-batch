@@ -1,0 +1,43 @@
+{
+  "needles": [
+    {
+      "number": 1,
+      "thread": "A",
+      "locked": false,
+      "unavailable": false
+    },
+    {
+      "number": 2,
+      "thread": "B",
+      "locked": false,
+      "unavailable": false
+    },
+    {
+      "number": 3,
+      "thread": "L",
+      "locked": true,
+      "unavailable": false
+    }
+  ],
+  "jobs": [
+    {
+      "name": "01-c.u01",
+      "mapping": {
+        "1": "C"
+      }
+    },
+    {
+      "name": "02-a.u01",
+      "mapping": {
+        "2": "A"
+      }
+    },
+    {
+      "name": "03-bcbc.u01",
+      "mapping": {
+        "3": "B",
+        "4": "C"
+      }
+    }
+  ]
+}
