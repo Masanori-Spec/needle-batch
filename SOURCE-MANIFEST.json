@@ -14,8 +14,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 6179,
-      "sha256": "f89dca53aab879fd3f00d8f8938135ecdbbe419d31b0b0b77fc3b06581a754a4"
+      "bytes": 6515,
+      "sha256": "f1a55f92d887816a2b88c6df304056fbc0fa4602af94144a888fb99409b5b9f8"
     },
     {
       "path": "THIRD_PARTY_NOTICES.md",
@@ -25,7 +25,7 @@
     {
       "path": "artifacts/boundary-export.json",
       "bytes": 289,
-      "sha256": "5b27d08fc69bf3868836ace4e565301c9d27893300b9e40bea204f4743ea1762"
+      "sha256": "9d3e93d6cbd9157448e66b62d511bf0a4824541cfa4f1a1831cb55130d15dd12"
     },
     {
       "path": "artifacts/bounds-benchmark.json",
@@ -45,7 +45,7 @@
     {
       "path": "artifacts/consumer-export.json",
       "bytes": 1562,
-      "sha256": "28ad58a7724f1c783757fce5b1afdfd0df21ad9b4f187e12397d8f4199e2ec98"
+      "sha256": "ccf125bd97b3a51933ee72ebef7268286ce9934754f63d4e055ff1a370cbd182"
     },
     {
       "path": "artifacts/consumer-spike.json",
@@ -74,8 +74,8 @@
     },
     {
       "path": "docs/VERIFICATION.md",
-      "bytes": 4446,
-      "sha256": "2aa4b9fe1bd83d70aa1f462df81c8cb46a3780a953bb56c817bb8a1009b35355"
+      "bytes": 6829,
+      "sha256": "e159c609b37aa30accc60a22f9331d67402aad4df766e1696db44250aaeea533"
     },
     {
       "path": "fixtures/01-c.u01",
@@ -174,8 +174,8 @@
     },
     {
       "path": "scripts/freeze-release.py",
-      "bytes": 3751,
-      "sha256": "b67b5a3ff9e5bce64d421d8864e392c37779d0cc576a1e67e2641e746274b9df"
+      "bytes": 3771,
+      "sha256": "aab408a63f459509ebacf0c64b5a88eb04e9bd93398b9fd7490ff9fe5ac19b6c"
     },
     {
       "path": "scripts/serve.mjs",
@@ -199,8 +199,8 @@
     },
     {
       "path": "scripts/verify-print.py",
-      "bytes": 2727,
-      "sha256": "7fe052022d509969ecbc5c6f748ca5a1c36b029775693c9a4d1c049fd2896675"
+      "bytes": 3619,
+      "sha256": "ec97f71c9c50215da1ec14c20a399eb6703243837cd8b12cb1ba42a13d36c663"
     },
     {
       "path": "src/core.mjs",
@@ -214,13 +214,13 @@
     },
     {
       "path": "src/export.mjs",
-      "bytes": 7342,
-      "sha256": "1228a8c2c7da543b72f1cbabfbcb7ebfc880dd6b7f78c4c032bd342093651400"
+      "bytes": 7376,
+      "sha256": "dcc3e32cb03359989255e07972bb4bdd9f9fde5b761ea1bf8b3cf81db31cd288"
     },
     {
       "path": "tests/browser.mjs",
-      "bytes": 13935,
-      "sha256": "1b4d938b31b7627f2f276f23c3284a9a6cf58308bb1bbb5ec1145b3210d42055"
+      "bytes": 13981,
+      "sha256": "3235df8ae73e6c059384c9bae095db42c38d0806848726bfd40aeddf73a48993"
     },
     {
       "path": "tests/consumer-edge-cases.py",
@@ -229,8 +229,8 @@
     },
     {
       "path": "tests/core.test.mjs",
-      "bytes": 9491,
-      "sha256": "29d79574f4e86ef43195454620c71f6ccd9729dbc37715d3d5d07c9f99dfabc7"
+      "bytes": 10572,
+      "sha256": "7c506390b09b478881e4a5a781817b81860893bcbfa5049ea2e2b895a8ac2177"
     },
     {
       "path": "tests/server-path.test.mjs",

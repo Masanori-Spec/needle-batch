@@ -1,7 +1,7 @@
 {
   "result": "PASS",
   "archive": "demo-batch.zip",
-  "archiveSha256": "7a6f59c5b1f8052e8362be3804fdc55396a7a3ee5fa921eea67c7f9a27a6daeb",
+  "archiveSha256": "4fe0f9e5d3b3877b2f47bdc4448f8e6ece884a17f067e1b7b0aa103510954e92",
   "consumer": "pystitch==1.0.1",
   "wheelSha256": "06ca3502111e2e782b9d4c4f18a2aa1c5e60588436d7697f2481bfe171f12c1b",
   "files": [

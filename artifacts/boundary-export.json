@@ -3,7 +3,7 @@
   "requestedOldSpaceMiB": 256,
   "records": 500000,
   "needleCommands": 30000,
-  "zipBytes": 12050013,
+  "zipBytes": 12050047,
   "allManifestCommandsPresent": true,
   "allNativeBytesEqual": true,
   "scope": "A maximum native/command expansion case, not a worst-case optimizer timing proof."

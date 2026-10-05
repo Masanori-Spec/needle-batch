@@ -55,6 +55,8 @@ The exact minimum applies only to that declared model. It is not an elapsed-time
 
 ## Verification
 
+[Hosted verification passed](https://github.com/Masanori-Spec/needle-batch/actions/runs/37260897067): Node 22/24, all 18 sandboxed browser scenarios, actual-download native consumer checks, and Japanese checklist PDF text/embedding/page-bounds checks. See the [evidence record](docs/VERIFICATION.md) for exact scope and visual review.
+
 ```sh
 npm ci --ignore-scripts
 npm run check
