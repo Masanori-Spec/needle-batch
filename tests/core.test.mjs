@@ -46,3 +46,5 @@ test('packaging has no original-code license grant and keeps dependency attribut
  const notices=fs.readFileSync(new URL('THIRD_PARTY_NOTICES.md',root),'utf8');assert.ok(notices.includes('pystitch 1.0.1'));assert.ok(notices.includes('MIT'));
  const freeze=fs.readFileSync(new URL('scripts/freeze-release.py',root),'utf8');assert.ok(!freeze.includes("glob('*.log')"));
 });
+
+test('printed checklist prefers installed Japanese fonts without bundling them',async()=>{const d=demo(),bundle=await exportBundle(d,optimize(prepareModel(d)));assert.ok(bundle.html.includes('"Noto Sans CJK JP","Noto Sans JP",system-ui,sans-serif'));assert.ok(!bundle.html.includes('@font-face'));});
